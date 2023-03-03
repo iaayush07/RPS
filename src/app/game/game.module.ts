@@ -7,6 +7,7 @@ import { RpsContainerComponent } from './rps-container/rps-container.component';
 import { WinnerContainerComponent } from './winner-container/winner-container.component';
 import { RpsPresentationComponent } from './rps-container/rps-presentation/rps-presentation.component';
 import { WinnerPresentationComponent } from './winner-container/winner-presentation/winner-presentation.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { WinnerPresentationComponent } from './winner-container/winner-presentat
   ],
   imports: [
     CommonModule,
-    GameRoutingModule
+    GameRoutingModule,
+    RouterModule
   ]
 })
 export class GameModule { }
