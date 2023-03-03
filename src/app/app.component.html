@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div class="h-100 d-flex flex-column main-wrapper">
+  <header>
+    <app-score-board></app-score-board>
+  </header>
+  <main class="flex-grow-1">
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>
+<!-- background-color : #1f3453;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right , rgba(15, 13, 60, .5) 0% , rgba(15, 13, 60, 0.2)50%, rgba(15, 13, 60, 0.5) 100% -->

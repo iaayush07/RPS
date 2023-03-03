@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family-base;
+}
+
+.main-wrapper {
+  background-color: #1f3453;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, rgba(15, 13, 60, .5) 0%, rgba(15, 13, 60, 0.2)50%, rgba(15, 13, 60, 0.5) 100%);
+}
