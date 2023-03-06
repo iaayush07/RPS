@@ -1,7 +1,8 @@
 <div class="d-flex justify-content-center align-items-center h-100">
   <div>
     <div class="triangle">
-      <svg width="313" height="278" xmlns="http://www.w3.org/2000/svg">
+      <svg width="313" height="278" xmlns="http://www.w3.org/2000/svg"
+        [ngClass]="isSelected == false ? 'd-block' : 'd-none' ">
         <path stroke="#000" stroke-width="15" fill="none" opacity=".2" d="M156.5 262 300 8H13z" />
       </svg>
       <button class="paper p-3 rounded-circle rps border border-0" (click)="playerChoice('paper')">
@@ -30,7 +31,7 @@
       </button>
     </div>
     <!-- <p class="text-white">computer : {{computerChoice}}</p>
-    <p class="text-white">Player : {{currentPlayerChoice}}</p>
-    <p class="text-white">winner :{{winningPlayer}}</p> -->
+      <p class="text-white">Player : {{currentPlayerChoice}}</p>
+      <p class="text-white">winner :{{winningPlayer}}</p> -->
   </div>
 </div>
