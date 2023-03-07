@@ -8,13 +8,13 @@
     width: 180px;
 
     .rps-icon {
-      height: 60px;
-      width: 60px;
+      height: 90px;
+      width: 90px;
     }
   }
 
   .win-title {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   .btn-white {
@@ -30,32 +30,30 @@
 }
 
 .circle--3 {
-  width: 25rem;
-  height: 25rem;
   background-color: rgba(255, 255, 255, 0.01);
   animation: smoothGrowing3 0.75s ease-in-out;
 }
 
-.circle {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
-}
-
 .circle--2 {
-  width: 21rem;
-  height: 21rem;
   background-color: rgba(255, 255, 255, 0.03);
   animation: smoothGrowing2 0.5s ease-in-out;
 }
 
 .circle--1 {
-  width: 17rem;
-  height: 17rem;
+  height: 250px;
+  height: 250px;
   background-color: rgba(255, 255, 255, 0.06);
   animation: smoothGrowing1 0.25s ease-in-out;
+}
+
+.paper {
+  background-color: #5372f0;
+}
+
+.rock {
+  background-color: #da2e4e;
+}
+
+.scissor {
+  background-color: #eca334;
 }

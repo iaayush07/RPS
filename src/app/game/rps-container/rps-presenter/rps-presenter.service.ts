@@ -19,6 +19,7 @@ export class RpsPresenterService {
 
   createComputerChoice() {
     this.computerChoice = this.choices[Math.floor(Math.random() * this.choices.length)];
+    this.gameService.computerChoice.next(this.computerChoice);
     console.log(this.computerChoice, 'computer');
     ;
   }
@@ -28,22 +29,8 @@ export class RpsPresenterService {
     this.gameService.playerChoice.next(this.currentPlayerChoice);
     console.log(this.currentPlayerChoice, 'player');
     this.createComputerChoice();
-    this.winner();
+    // this.winner();
   }
 
-  winner() {
-    if ((this.currentPlayerChoice === 'rock' && this.computerChoice === 'scissors') ||
-      (this.currentPlayerChoice === 'paper' && this.computerChoice === 'rock') ||
-      (this.currentPlayerChoice === 'scissors' && this.computerChoice === 'paper')) {
-      this.winningPlayer = 'player'
-      console.log('Player wins!');
-    } else if
-      (this.computerChoice === this.currentPlayerChoice) {
-      this.winningPlayer = 'Draw'
-      console.log('Tie!');
-    } else {
-      console.log('Computer wins!');
-      this.winningPlayer = 'computer'
-    }
-  }
+
 }
