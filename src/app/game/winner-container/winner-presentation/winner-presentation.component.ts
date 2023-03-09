@@ -32,10 +32,13 @@ export class WinnerPresentationComponent implements OnInit {
       this.computerChoice = res;
       // console.log(this.computerChoice);
     });
+    this.winningPlayerr();
+    this.winner();
+  }
+  async winningPlayerr() {
     this.gameservice.winnerPlayer$.subscribe((res: any) => {
       this.winningPlayer = res;
     })
-    this.winner();
   }
 
   winner() {
