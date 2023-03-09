@@ -26,11 +26,11 @@ export class WinnerPresentationComponent implements OnInit {
   ngOnInit(): void {
     this.gameservice.playerChoice$.subscribe((res: string) => {
       this.playerChoice = res;
-      console.log(this.playerChoice);
+      // console.log(this.playerChoice);
     })
     this.gameservice.computerChoice$.subscribe((res: string) => {
       this.computerChoice = res;
-      console.log(this.computerChoice);
+      // console.log(this.computerChoice);
     });
     this.gameservice.winnerPlayer$.subscribe((res: any) => {
       this.winningPlayer = res;

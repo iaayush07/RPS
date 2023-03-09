@@ -20,14 +20,14 @@ export class RpsPresenterService {
   createComputerChoice() {
     this.computerChoice = this.choices[Math.floor(Math.random() * this.choices.length)];
     this.gameService.computerChoice.next(this.computerChoice);
-    console.log(this.computerChoice, 'computer');
+    // console.log(this.computerChoice, 'computer');
     ;
   }
 
   playerChoiceee(item: string) {
     this.currentPlayerChoice = item;
     this.gameService.playerChoice.next(this.currentPlayerChoice);
-    console.log(this.currentPlayerChoice, 'player');
+    // console.log(this.currentPlayerChoice, 'player');
     this.createComputerChoice();
     // this.winner();
   }

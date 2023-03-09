@@ -27,7 +27,7 @@ export class WinnerPresenterService implements OnInit {
       this.winningPlayer = 'computer'
       // console.log('Computer wins!')
     }
-    console.log(this.winningPlayer, 787);
+    // console.log(this.winningPlayer, 787);
     this.gameService.winnerPlayer.next(this.winningPlayer);
   }
 }
