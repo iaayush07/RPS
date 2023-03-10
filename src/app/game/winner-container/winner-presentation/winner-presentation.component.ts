@@ -35,7 +35,7 @@ export class WinnerPresentationComponent implements OnInit {
     this.winningPlayerr();
     this.winner();
   }
-  async winningPlayerr() {
+  winningPlayerr() {
     this.gameservice.winnerPlayer$.subscribe((res: any) => {
       this.winningPlayer = res;
     })
