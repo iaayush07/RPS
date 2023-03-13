@@ -1,50 +1,59 @@
-<div class="d-flex justify-content-center align-items-center h-100 winner-wrapper">
-  <div class="d-flex flex-column align-items-center">
-    <p class="mb-0 text-white title">You Picked</p>
-    <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--3': ''">
-      <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--2': ''">
-        <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--1': ''">
-          <div class="p-3 rounded-circle border border-0"
-            [ngClass]="[playerChoice == 'paper'? 'paper' : '' ,playerChoice == 'rock'? 'rock' : '', playerChoice == 'scissors'? 'scissor' : '']">
-            <div class="bg-white p-3 rounded-circle rps d-flex justify-content-center align-items-center">
+<div class=" h-100 winner-wrapper">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <p class="mb-0 text-white title">You Picked</p>
+      <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--3': ''">
+        <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--2': ''">
+          <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'player' ? 'circle--1': ''">
+            <div class="p-3 rounded-circle border border-0"
+              [ngClass]="[playerChoice == 'paper'? 'paper' : '' ,playerChoice == 'rock'? 'rock' : '', playerChoice == 'scissors'? 'scissor' : '']">
+              <div class="bg-white p-3 rounded-circle rps d-flex justify-content-center align-items-center">
 
-              <img src="../../../../assets/images/icon-scissors.svg" alt="" class="rps-icon"
-                *ngIf="playerChoice == 'scissors'">
-              <img src="../../../../assets/images/icon-paper.svg" alt="" class="rps-icon"
-                *ngIf="playerChoice == 'paper'">
-              <img src="../../../../assets/images/icon-rock.svg" alt="" class="rps-icon" *ngIf="playerChoice == 'rock'">
+                <img src="../../../../assets/images/icon-scissors.svg" alt="" class="rps-icon"
+                  *ngIf="playerChoice == 'scissors'">
+                <img src="../../../../assets/images/icon-paper.svg" alt="" class="rps-icon"
+                  *ngIf="playerChoice == 'paper'">
+                <img src="../../../../assets/images/icon-rock.svg" alt="" class="rps-icon"
+                  *ngIf="playerChoice == 'rock'">
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-5 d-sm-flex flex-column align-items-center d-none">
+      <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'computer'">You Lose</p>
+      <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'player'">You Win</p>
+      <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'draw'">Draw !</p>
+      <button class="btn btn-white text-uppercase px-5" (click)="playAgain()">Play again</button>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <p class="mb-0 text-white title text-center">The Housed Picked</p>
+      <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--3': ''">
+        <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--2': ''">
+          <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--1': ''">
+            <div class="p-3 rounded-circle border border-0"
+              [ngClass]="[computerChoice == 'paper'? 'paper' : '' ,computerChoice == 'rock'? 'rock' : '', computerChoice == 'scissors'? 'scissor' : '']">
+              <div class="bg-white p-3 rounded-circle rps d-flex justify-content-center align-items-center">
+
+                <img src="../../../../assets/images/icon-scissors.svg" alt="" class="rps-icon"
+                  *ngIf="computerChoice == 'scissors'">
+                <img src="../../../../assets/images/icon-paper.svg" alt="" class="rps-icon"
+                  *ngIf="computerChoice == 'paper'">
+                <img src="../../../../assets/images/icon-rock.svg" alt="" class="rps-icon"
+                  *ngIf="computerChoice == 'rock'">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="mx-5 d-flex flex-column align-items-center">
+  <div class=" d-flex d-sm-none flex-column align-items-center">
     <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'computer'">You Lose</p>
     <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'player'">You Win</p>
     <p class="mb-0 win-title text-white" *ngIf="winningPlayer == 'draw'">Draw !</p>
     <button class="btn btn-white text-uppercase px-5" (click)="playAgain()">Play again</button>
-  </div>
-  <div class="d-flex flex-column align-items-center">
-    <p class="mb-0 text-white title text-center">The Housed Picked</p>
-    <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--3': ''">
-      <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--2': ''">
-        <div class="p-3 rounded-circle" [ngClass]="winningPlayer == 'computer' ? 'circle--1': ''">
-          <div class="p-3 rounded-circle border border-0"
-            [ngClass]="[computerChoice == 'paper'? 'paper' : '' ,computerChoice == 'rock'? 'rock' : '', computerChoice == 'scissors'? 'scissor' : '']">
-            <div class="bg-white p-3 rounded-circle rps d-flex justify-content-center align-items-center">
-
-              <img src="../../../../assets/images/icon-scissors.svg" alt="" class="rps-icon"
-                *ngIf="computerChoice == 'scissors'">
-              <img src="../../../../assets/images/icon-paper.svg" alt="" class="rps-icon"
-                *ngIf="computerChoice == 'paper'">
-              <img src="../../../../assets/images/icon-rock.svg" alt="" class="rps-icon"
-                *ngIf="computerChoice == 'rock'">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

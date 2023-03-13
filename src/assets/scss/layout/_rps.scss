@@ -5,6 +5,20 @@
 
 .triangle {
   position: relative;
+  width: 300px;
+  height: 270px;
+
+  @media (max-width : 425px) {
+    height: 200px;
+    width: 250px;
+  }
+
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
 
   .paper {
     position: absolute;
@@ -15,9 +29,14 @@
 
   .rock {
     position: absolute;
-    bottom: -40px;
-    left: 95px;
+    bottom: -28px;
+    left: 92px;
     background-color: #da2e4e;
+
+    @media (max-width : 425px) {
+      left: 53px;
+      bottom: -18px;
+    }
   }
 
   .scissor {
@@ -25,6 +44,10 @@
     right: -30px;
     top: -50px;
     background-color: #eca334;
+
+    @media (max-width : 425px) {
+      right: -4px;
+    }
   }
 }
 

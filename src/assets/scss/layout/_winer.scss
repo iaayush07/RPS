@@ -1,15 +1,29 @@
 .winner-wrapper {
   .title {
     font-size: 36px;
+
+    @media (max-width: 425px) {
+      font-size: 24px;
+    }
   }
 
   .rps {
     height: 180px;
     width: 180px;
 
+    @media (max-width: 425px) {
+      height: 100px;
+      width: 100px;
+    }
+
     .rps-icon {
       height: 90px;
       width: 90px;
+
+      @media (max-width: 425px) {
+        height: 60px;
+        width: 60px;
+      }
     }
   }
 
@@ -40,8 +54,6 @@
 }
 
 .circle--1 {
-  height: 250px;
-  height: 250px;
   background-color: rgba(255, 255, 255, 0.06);
   animation: smoothGrowing1 0.25s ease-in-out;
 }
@@ -56,4 +68,9 @@
 
 .scissor {
   background-color: #eca334;
+}
+
+.popup {
+  height: 350px;
+  width: 600px;
 }
