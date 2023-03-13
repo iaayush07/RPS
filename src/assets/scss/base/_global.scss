@@ -1,3 +1,6 @@
+@use "variables";
+@use "colors";
+
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +11,11 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: $font-family-base;
+  font-family: variables.$font-family-base;
 }
 
 .main-wrapper {
-  background-color: #1f3453;
+  background-color: colors.$bg-color;
   /* For browsers that do not support gradients */
   background-image: linear-gradient(to bottom right, rgba(15, 13, 60, .5) 0%, rgba(15, 13, 60, 0.2)50%, rgba(15, 13, 60, 0.5) 100%);
 }
